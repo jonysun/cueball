@@ -1,0 +1,75 @@
+:root {
+  color: #17201c;
+  background: #edf1ee;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  min-height: 100vh;
+  background: #edf1ee;
+}
+
+.scene-region {
+  min-width: 0;
+  min-height: 100vh;
+  background: #10221d;
+}
+
+.scene-empty {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  color: #f4f8f5;
+}
+
+.side-panel {
+  border-left: 1px solid #c7d0ca;
+  background: #f8faf8;
+  padding: 20px;
+}
+
+.side-panel h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.side-panel p {
+  margin: 0;
+  color: #596860;
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(420px, 62vh) auto;
+  }
+
+  .scene-region,
+  .scene-empty {
+    min-height: 420px;
+  }
+
+  .side-panel {
+    border-left: 0;
+    border-top: 1px solid #c7d0ca;
+  }
+}
