@@ -4,7 +4,7 @@ import { Toolbar } from './components/Toolbar';
 import { BilliardsScene } from './components/scene/BilliardsScene';
 import { calculateShotGeometry } from './domain/shotGeometry';
 import { defaultTableSpec, getPocketById } from './domain/tableSpec';
-import type { PocketId } from './domain/types';
+import type { PocketId, Vec2 } from './domain/types';
 import {
   type AppState,
   type DisplayOptions,
@@ -44,6 +44,14 @@ export default function App() {
     }));
   }
 
+  function setCueBall(cueBall: Vec2) {
+    setState((current) => ({ ...current, cueBall }));
+  }
+
+  function setObjectBall(objectBall: Vec2) {
+    setState((current) => ({ ...current, objectBall }));
+  }
+
   return (
     <main className="app-shell">
       <section className="scene-region" aria-label="3D billiards aiming scene">
@@ -51,6 +59,8 @@ export default function App() {
           spec={defaultTableSpec}
           geometry={geometry}
           displayOptions={state.displayOptions}
+          onCueBallChange={setCueBall}
+          onObjectBallChange={setObjectBall}
         />
       </section>
       <aside className="side-panel" aria-label="Shot calculation panel">
