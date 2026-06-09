@@ -57,6 +57,144 @@ select {
   color: #596860;
 }
 
+.panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panel-header strong {
+  color: #b42318;
+  font-size: 28px;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.metric-grid div {
+  border: 1px solid #d8dfda;
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.metric-grid dt {
+  color: #66756d;
+  font-size: 12px;
+}
+
+.metric-grid dd {
+  margin: 4px 0 0;
+  font-weight: 700;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 18px;
+  border: 1px solid #cbd5cf;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.segmented button {
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #405048;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.segmented button.active {
+  background: #143b31;
+  color: #ffffff;
+}
+
+.teaching-list {
+  margin: 0 0 18px;
+  padding-left: 0;
+  list-style: none;
+  color: #30433a;
+}
+
+.teaching-list li + li {
+  margin-top: 10px;
+}
+
+.formula-panel {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.formula-panel code {
+  display: block;
+  border-radius: 6px;
+  background: #ebf0ed;
+  padding: 8px;
+  color: #21332a;
+  white-space: normal;
+}
+
+.formula-panel p {
+  margin: 0;
+}
+
+.warnings {
+  border-left: 3px solid #b42318;
+  background: #fff4f2;
+  padding: 10px 12px;
+  color: #812018;
+}
+
+.warnings p {
+  margin: 0;
+}
+
+.warnings p + p {
+  margin-top: 6px;
+}
+
+.toolbar {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  color: #405048;
+  font-weight: 700;
+}
+
+.field select {
+  width: 100%;
+  border: 1px solid #cbd5cf;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 9px 10px;
+}
+
+.toggle-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
 @media (max-width: 860px) {
   .app-shell {
     grid-template-columns: 1fr;
