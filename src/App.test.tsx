@@ -1,6 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import App from './App';
+
+vi.mock('./components/scene/BilliardsScene', () => ({
+  BilliardsScene: () => <div data-testid="mock-billiards-scene">Mock 3D scene</div>
+}));
 
 describe('App', () => {
   it('shows teaching mode by default and switches to formula mode', () => {

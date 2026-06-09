@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { CalculationPanel } from './components/CalculationPanel';
 import { Toolbar } from './components/Toolbar';
+import { BilliardsScene } from './components/scene/BilliardsScene';
 import { calculateShotGeometry } from './domain/shotGeometry';
 import { defaultTableSpec, getPocketById } from './domain/tableSpec';
 import type { PocketId } from './domain/types';
@@ -46,7 +47,11 @@ export default function App() {
   return (
     <main className="app-shell">
       <section className="scene-region" aria-label="3D billiards aiming scene">
-        <div className="scene-empty">3D aiming scene loading</div>
+        <BilliardsScene
+          spec={defaultTableSpec}
+          geometry={geometry}
+          displayOptions={state.displayOptions}
+        />
       </section>
       <aside className="side-panel" aria-label="Shot calculation panel">
         <CalculationPanel
