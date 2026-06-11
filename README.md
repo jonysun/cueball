@@ -69,10 +69,12 @@ docker push <dockerhub-namespace>/cueball-aiming-simulator:latest
 
 The workflow at `.github/workflows/docker-publish.yml` can publish the image automatically after a GitHub push.
 
-Configure these repository secrets first:
+Configure these repository secrets in this repository first:
 
 - `DOCKER_USERNAME`
 - `DOCKER_TOKEN`
+
+Path: `Settings > Secrets and variables > Actions > Repository secrets`.
 
 The published image name is:
 
