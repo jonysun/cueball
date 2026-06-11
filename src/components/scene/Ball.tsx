@@ -18,6 +18,7 @@ export function Ball({ position, radius, color, name, opacity = 1 }: BallProps) 
         metalness={0.05}
         transparent={opacity < 1}
         opacity={opacity}
+        depthWrite={opacity >= 1}
       />
     </mesh>
   );
