@@ -71,11 +71,11 @@ The workflow at `.github/workflows/docker-publish.yml` can publish the image aut
 
 Configure these repository secrets first:
 
-- `DOCKERHUB_USERNAME`
-- `DOCKERHUB_TOKEN`
+- `DOCKER_USERNAME`
+- `DOCKER_TOKEN`
 
 The published image name is:
 
 ```text
-<DOCKERHUB_USERNAME>/cueball-aiming-simulator
+<DOCKER_USERNAME>/cueball-aiming-simulator
 ```
